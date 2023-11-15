@@ -10,7 +10,7 @@ import { User } from 'src/app/Models/user';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent  {
-  customer:String="Customer" 
+  customer:String="Customer"
   constructor(private userS : UserService ,private r:Router){}
 user:User = {
 
@@ -27,7 +27,8 @@ add(F:NgForm){
     email: F.value.email,
     password: F.value.password,
     picture: "https://bootdey.com/img/Content/avatar/avatar5.png",
-    profession: F.value.Profession
+    profession: F.value.Profession,
+    skills:["Angular","springboot"]
   }
   this.userS.addUser(newUser).subscribe(()=>{
     alert("user added");

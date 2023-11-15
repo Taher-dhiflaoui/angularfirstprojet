@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/Core/Services/user.service';
 import { User } from 'src/app/Models/user';
@@ -27,11 +27,17 @@ export class UpdateUserComponent implements OnInit {
         password: new FormControl(this.user.password),
         profession: new FormControl(this.user.profession),
         accountCategory : new FormControl(this.user.accountCategory),
-        picture : new FormControl('')
+        picture : new FormControl(''),
+        skills:new FormArray([new FormControl('',Validators.minLength(3)), new FormControl('', Validators.minLength(3))])
       })
     });
   }
-
+get skills(){
+    return this.updateForm.get('skills') as FormArray;
+}
+addskills(){
+    this.skills.push(new FormControl('',Validators.minLength(3)));
+}
   getParam() {
     this.avtR.paramMap.subscribe(data => {this.id = Number(data.get('id'));
 

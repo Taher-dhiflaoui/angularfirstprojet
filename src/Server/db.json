@@ -9,7 +9,9 @@
       "email": "mila@kunis.com",
       "password": "test",
       "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "skills":["Angular","springboot"]
+
     },
     {
       "id": 2,
@@ -20,7 +22,9 @@
       "password": "test",
       "profession": "Software Engineer",
       "accountCategory": "Admin",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png"
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
+      "skills":["Angular","springboot"]
+
     },
     {
       "id": 3,
@@ -31,7 +35,9 @@
       "password": "test",
       "profession": "Software Engineer",
       "accountCategory": "Customer",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png"
+      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png",
+      "skills":["Angular","springboot"]
+
     },
     {
       "id": 4,
@@ -42,18 +48,9 @@
       "email": "Ryan@nicholson.com",
       "password": "test",
       "picture": "https://bootdey.com/img/Content/avatar/avatar4.png",
-      "profession": "Software Engineer"
-    },
-    {
-      "id": 1699267497628,
-      "firstName": "moncef",
-      "lastName": "moncef",
-      "birthDate": "1234-03-11",
-      "accountCategory": "Customer",
-      "email": "mbenjamaia@gmail.com",
-      "password": "EETRTYUIO",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "AAZEZAZEAZE"
+      "profession": "Software Engineer",
+      "skills":["Angular","springboot"]
+
     },
     {
       "id": 1699297755149,
@@ -64,7 +61,9 @@
       "email": "ewgwa@gmail.com",
       "password": "bhvfguft57",
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "jgfkuyjgbk"
+      "profession": "jgfkuyjgbk",
+      "skills":["Angular","springboot"]
+
     }
   ],
   "products": [

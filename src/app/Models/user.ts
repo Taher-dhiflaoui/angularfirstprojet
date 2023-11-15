@@ -8,4 +8,5 @@ password!: string;
 profession!: string;
 accountCategory!: string;
 picture!: string;
+skills!: string[];
 }
