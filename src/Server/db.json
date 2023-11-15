@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Nour",
+      "lastName": " Kunis",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Admin",
+      "email": "mila@kunis.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "id": 2,
+      "firstName": "test",
+      "lastName": " Kunis",
+      "birthDate": "1999-06-30",
+      "email": "mila@kunis.com",
+      "password": "test",
+      "profession": "Software Engineer",
+      "accountCategory": "Admin",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png"
+    },
+    {
+      "id": 3,
+      "firstName": "George",
+      "lastName": "Cloney",
+      "birthDate": "1999-06-30",
+      "email": "marlon@brando.com",
+      "password": "test",
+      "profession": "Software Engineer",
+      "accountCategory": "Customer",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png"
+    },
+    {
+      "id": 4,
+      "firstName": "Ryan",
+      "lastName": "Gossling",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Golden",
+      "email": "Ryan@nicholson.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar4.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "id": 1699267497628,
+      "firstName": "moncef",
+      "lastName": "moncef",
+      "birthDate": "1234-03-11",
+      "accountCategory": "Customer",
+      "email": "mbenjamaia@gmail.com",
+      "password": "EETRTYUIO",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
+      "profession": "AAZEZAZEAZE"
+    },
+    {
+      "id": 1699297755149,
+      "firstName": "taher",
+      "lastName": "dhiflaoui",
+      "birthDate": "2023-11-21",
+      "accountCategory": "Customer",
+      "email": "ewgwa@gmail.com",
+      "password": "bhvfguft57",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
+      "profession": "jgfkuyjgbk"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "code": 127,
+      "libelle": "PC",
+      "prixunitaire": 2000,
+      "tauxTva": 10
+    },
+    {
+      "id": 2,
+      "code": 128,
+      "libelle": "TV",
+      "prixunitaire": 1000,
+      "tauxTva": 20
+    },
+    {
+      "id": 3,
+      "code": 128,
+      "libelle": "Table",
+      "prixunitaire": 200,
+      "tauxTva": 30
+    },
+    {
+      "id": 4,
+      "code": 128,
+      "libelle": "Table",
+      "prixunitaire": 200,
+      "tauxTva": 30
+    },
+    {
+      "id": 5,
+      "code": 127,
+      "libelle": "PC",
+      "prixunitaire": 2000,
+      "tauxTva": 10
+    }
+  ]
+}

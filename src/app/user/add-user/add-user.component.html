@@ -1,0 +1,47 @@
+<form #addForm="ngForm" (ngSubmit)="add(addForm)">
+    <div class="form-group" >
+<label> FirstName</label>
+<input type="text" class="form-control" id="fn" name="fn" ngModel required minlength="3" #fn="ngModel" pattern="[a-zA-Z]*"> 
+<small class="text-danger" *ngIf="fn?.errors?.['required'] && fn.touched " >name is required </small>
+<small class="text-danger" *ngIf="fn?.errors?.['minlength'] && fn.touched " > Name must be at least 3 cara</small>
+<small class="text-danger" *ngIf="fn?.errors?.['pattern'] && fn.touched " > !!!!</small>
+<div>
+<label> LastName</label>
+<input type="text" class="form-control" id="ln" name="ln" ngModel required minlength="3" #ln="ngModel" pattern="[a-zA-Z]*"> 
+<small class="text-danger" *ngIf="ln?.errors?.['required'] && ln.touched " >lastname is required </small>
+<small class="text-danger" *ngIf="ln?.errors?.['minlength'] && ln.touched " > LastName must be at least 3 cara</small>
+<small class="text-danger" *ngIf="ln?.errors?.['pattern'] && ln.touched " >!!!!! </small>
+</div>
+<div>
+    <label> Date</label>
+<input type="date" class="form-control" id="date" name="date" ngModel required #date="ngModel"> 
+<small class="text-danger" *ngIf="date?.errors?.['required'] " >date is required </small>
+</div>
+<div>
+<label> Email</label>
+<input type="email" class="form-control" id="email" name="email" ngModel required #email="ngModel" pattern="[a-zA-Z0-9._-]+@gmail.com"> 
+<small class="text-danger" *ngIf="email?.errors?.['required'] && email.touched " >email is required </small>
+<small class="text-danger" *ngIf="email?.errors?.['pattern'] && fn.touched " > !!!!!</small>
+</div>
+<div>
+    <label> password</label>
+    <input type="password" class="form-control" id="password" name="password" ngModel required #password="ngModel" pattern="^[a-zA-Z0-9]{8,}?"> 
+    <small class="text-danger" *ngIf="password?.errors?.['required'] && password.touched " >password is required </small>
+    <small class="text-danger" *ngIf="password?.errors?.['pattern'] && password.touched " >!!!!! </small>
+    </div>
+
+    <div>
+        <label> Profession</label>
+        <input type="text" class="form-control" id="Profession" name="Profession" ngModel required  #Profession="ngModel"> 
+        <small class="text-danger" *ngIf="Profession?.errors?.['required'] && Profession.touched " >Profession is required </small>
+        </div>
+
+        <div>
+            <label> Customer category</label>
+            <input type="text" class="form-control" id="category" readonly value="Customer" name="category"  [(ngModel)]="customer"   ngModel  #category="ngModel"> 
+            
+            
+            </div>
+     </div>
+     <button type="text" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
+</form>

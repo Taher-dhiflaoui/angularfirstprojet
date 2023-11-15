@@ -1,0 +1,23 @@
+<p>invoice works!</p>
+<!-- <div *ngIf="active; ">
+  <p>ID Facture: {{ id }}</p>
+  <p>Montant Facture: {{ invoice.montantFacture }}</p>
+  <p>Montant Remise: {{ invoice.montantRemise }}</p>
+  <p>Date Facture: {{ invoice.dateFacture }}</p>
+</div> -->
+
+<div *ngFor="let invoice of invoice">
+    <div *ngIf="invoice.idFacture===id && active">
+      <p>ID Facture:  {{invoice.idFacture}}</p>
+      <p>Montant Remise:{{invoice.montantRemise}}</p>
+      <p>Montant Facture: {{invoice.montantFacture}}</p>
+      <p>Date Facture: {{invoice.dateFacture}}</p>
+      {{invoice.active}}
+    </div>
+
+   
+  </div>
+  <div *ngIf="active===false">
+    <p>{{ errorMessage }}</p>
+  </div>
+  <button [routerLink]="['/main-invoice']">Retour</button>
