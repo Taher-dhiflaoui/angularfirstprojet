@@ -1,0 +1,60 @@
+<h2>Update User</h2>
+<form [formGroup]="updateForm" (ngSubmit)="update()" *ngIf="updateForm">
+  <div class="form-group">
+    <label for="fn">First Name</label>
+    <input type="text" class="form-control" id="fn" name="fn" formControlName="firstName">
+    <!--<small class="text text-danger" *ngIf="fn.errors?.['required']">Name is required</small>
+    <small class="text text-danger" *ngIf="fn.errors?.['minlength']">Name must be at least 3 caracter</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['pattern']">Name must be with caracter</small>-->
+    <br>
+
+    <label for="ln">Last Name</label>
+    <input type="text" class="form-control" id="ln" name="ln" formControlName="lastName">
+    <!--<small class="text text-danger" *ngIf="ln.errors?.['required']">LName is required</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['minlength']">LName must be at least 3 caracter</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['pattern']">LName must be with caracter</small>-->
+    <br>
+
+    <label for="bd">Birth date</label>
+    <input type="date" class="form-control" id="bd" name="bd" formControlName="birthDate">
+    <!--<small class="text text-danger" *ngIf="bd.errors?.['required']">Birth date is required</small>-->
+    <br>
+
+    <label for="em">Email</label>
+    <input type="email" class="form-control" id="em" name="em" formControlName="email">
+    <!--<small class="text text-danger" *ngIf="em.errors?.['required']">LName is required</small>
+    <small class="text text-danger" *ngIf="em.errors?.['pattern']">Email must be @gmail.com</small>-->
+    <br>
+
+    <label for="pw">Password</label>
+    <input type="password" class="form-control" id="pw" name="pw" formControlName="password">
+    <!--<small class="text text-danger" *ngIf="pw.errors?.['required']">Password is required</small>
+    <small class="text text-danger" *ngIf="pw.errors?.['pattern']">Password must have at least </small>-->
+    <br>
+
+    <label for="pf">Profession</label>
+    <input type="text" class="form-control" id="pf" name="pf" formControlName="profession" >
+    <!--<small class="text text-danger" *ngIf="pf.errors?.['required']">Profession is required</small>-->
+    <br>
+
+    <label for="ac">customer category</label>
+    <input type="text" class="form-control" id="ac" name="cc" formControlName="customerCategory">
+    <br>
+
+    <label for="pic">Picture</label>
+    <input type="text" class="form-control" id="pic" name="pic" formControlName="picture">
+    <br>
+
+    <label for="skills">Skills</label>
+    <div formArrayName="skills" id="skills">
+      <button type="button" class="btn btn-primary" (click)="addSkills()">Add Skills</button>
+      <div *ngFor="let skill of skills.controls; let i=index">
+        <input type="text" id="skill-{{i}}" class="form-control" name="skill-{{i}}" [formControlName]="i">
+      </div>
+    </div>
+    <br>
+
+  </div>
+  <button type="submit" class="btn btn-primary" >Update</button>
+</form>
+<!--<button (click)="add()">Add</button>-->

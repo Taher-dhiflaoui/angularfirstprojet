@@ -1,35 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Invoice } from '../Models/invoice';
-import { InvoiceListComponent } from '../invoice-list/invoice-list.component';
+import {Component, Input} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Invoice} from "../Models/invoice";
+import {InvoiceListComponent} from "../invoice-list/invoice-list.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-invoice',
   templateUrl: './invoice.component.html',
   styleUrls: ['./invoice.component.css']
 })
-export class InvoiceComponent implements OnInit {
-  id!: number | undefined;
-  active !:boolean | undefined;
-  invoice !: Invoice[];
-  errorMessage = '';
-
-  constructor(private route: ActivatedRoute, private invoiceliste:InvoiceListComponent) { 
-    this.invoice = this.invoiceliste.getDataList();
+export class InvoiceComponent {
+  id!:Number;
+  active!:boolean;
+  dataList!: Invoice[];
+  constructor(private actR:ActivatedRoute,private invoicelist:InvoiceListComponent,private Router:Router) {
+    this.dataList = this.invoicelist.getDataList();
   }
-
-  ngOnInit(): void {
-    this.getParam();
-    
-  }
-
-  getParam() {
-    this.route.queryParams.subscribe(params => {
-      this.id = +params['id'] || undefined;
-      this.active = params['active'] === 'true';
-    if (!this.active) {
-        this.errorMessage = 'Impossible de visualiser les détails de la facture';
-      }
+ /* getParam(): void {
+    this.actR.paramMap.subscribe(data => {
+      this.id = Number(data.get('id'));
+      this.active = data.get('active') === 'true';
     });
+  }*/
+  getParam(): void {
+    this.actR.queryParams.subscribe(params => {
+      this.id = +params['id'];
+      this.active = params['active']==='true';
+    });
+  }
+  ngOnInit() {
+    this.getParam()
+  }
+  retour(){
+    this.Router.navigate(["mainInvoice"]);
   }
 }

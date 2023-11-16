@@ -1,0 +1,53 @@
+<h2>Add new User</h2>
+<form #addForm="ngForm" (ngSubmit)="add(addForm)">
+  <div class="form-group">
+    <label for="fn">First Name</label>
+    <input type="text" class="form-control" id="fn" name="fn" ngModel required minlength="3" #fn="ngModel" pattern="[a-zA-Z]*">
+    <small class="text text-danger" *ngIf="fn.errors?.['required']">Name is required</small>
+    <small class="text text-danger" *ngIf="fn.errors?.['minlength']">Name must be at least 3 caracter</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['pattern']">Name must be with caracter</small>
+    <br>
+
+    <label for="fn">Last Name</label>
+    <input type="text" class="form-control" id="ln" name="ln" ngModel required minlength="3" #ln="ngModel" pattern="[a-zA-Z]*">
+    <small class="text text-danger" *ngIf="ln.errors?.['required']">LName is required</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['minlength']">LName must be at least 3 caracter</small>
+    <small class="text text-danger" *ngIf="ln.errors?.['pattern']">LName must be with caracter</small>
+    <br>
+
+    <label for="bd">Birth date</label>
+    <input type="date" class="form-control" id="bd" name="bd" ngModel required #bd="ngModel">
+    <small class="text text-danger" *ngIf="bd.errors?.['required']">Birth date is required</small>
+    <br>
+
+    <label for="em">Email</label>
+    <input type="email" class="form-control" id="em" name="em" ngModel required #em="ngModel" pattern="^[a-zA-Z0-9._-]+@gmail.com">
+    <small class="text text-danger" *ngIf="em.errors?.['required']">LName is required</small>
+    <small class="text text-danger" *ngIf="em.errors?.['pattern']">Email must be @gmail.com</small>
+    <br>
+
+    <label for="pw">Password</label>
+    <input type="password" class="form-control" id="pw" name="pw" ngModel required #pw="ngModel" pattern="^[a-zA-Z0-9]{8,}?">
+    <small class="text text-danger" *ngIf="pw.errors?.['required']">Password is required</small>
+    <small class="text text-danger" *ngIf="pw.errors?.['pattern']">Password must have at least </small>
+    <br>
+
+    <label for="pf">Profession</label>
+    <input type="text" class="form-control" id="pf" name="pf" ngModel required #pf="ngModel" >
+    <small class="text text-danger" *ngIf="pf.errors?.['required']">Profession is required</small>
+    <br>
+
+    <label for="cc">customer category</label>
+    <input type="text" class="form-control" id="cc" name="cc" [(ngModel)]="customer" required readonly>
+    <br>
+
+    <label for="sk">Skills</label>
+    <input type="text" class="form-control" id="sk" name="sk" ngModel required #sk="ngModel" >
+    <small class="text text-danger" *ngIf="pf.errors?.['required']">Skills is required</small>
+    <br>
+
+
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
+</form>
+<!--<button (click)="add()">Add</button>-->
