@@ -2,31 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import {ListUserComponent} from "./list-user/list-user.component";
-import {UsersComponent} from "./users/users.component";
-import {AdduserComponent} from "./adduser/adduser.component";
-import {EditUserComponent} from "./edit-user/edit-user.component";
-import {InvoiceListComponent} from "../invoice-list/invoice-list.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {UserService} from "../Core/Services/user.service";
+import { AddUserComponent } from './add-user/add-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilsUserComponent } from './fils-user/fils-user.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
+    AddUserComponent,
+    UpdateUserComponent,
     ListUserComponent,
-    UsersComponent,
-    AdduserComponent,
-    EditUserComponent
+    FilsUserComponent
   ],
   imports: [
-    FormsModule,
     CommonModule,
     UserRoutingModule,
+    FormsModule,
     ReactiveFormsModule
-  ],
-  exports: [
-    UsersComponent
-  ],
-  providers: [InvoiceListComponent, UserService]
+    
+  ]
 })
 export class UserModule { }

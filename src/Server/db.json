@@ -12,7 +12,7 @@
       "profession": "Software Engineer",
       "skills": [
         "Angular",
-        "Spring"
+        "springboot"
       ]
     },
     {
@@ -27,7 +27,7 @@
       "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
       "skills": [
         "Angular",
-        "Spring"
+        "springboot"
       ]
     },
     {
@@ -42,7 +42,7 @@
       "picture": "https://bootdey.com/img/Content/avatar/avatar1.png",
       "skills": [
         "Angular",
-        "Spring"
+        "springboot"
       ]
     },
     {
@@ -57,37 +57,22 @@
       "profession": "Software Engineer",
       "skills": [
         "Angular",
-        "Spring"
+        "springboot"
       ]
     },
     {
-      "id": 5,
-      "firstName": "Robert",
-      "lastName": "Downey",
-      "birthDate": "1999-06-30",
-      "accountCategory": "Blocked Account",
-      "email": "robert@nicholson.com",
-      "password": "test",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "Software Engineer",
-      "skills": [
-        "Angular",
-        "Spring"
-      ]
-    },
-    {
-      "id": 1700043518882,
-      "firstName": "atef",
-      "lastName": "riahi",
-      "birthDate": "2000-01-14",
+      "id": 1700469453128,
+      "firstName": "moncef",
+      "lastName": "benjamaia",
+      "birthDate": "2023-11-22",
       "accountCategory": "Customer",
-      "email": "atef@gmail.com",
-      "password": "atefriahi",
+      "email": "freeelanci@gmail.com",
+      "password": "12345678",
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "Software Engineer",
+      "profession": "GFGCXZEYTV",
       "skills": [
         "Angular",
-        "Spring"
+        "springboot"
       ]
     }
   ],
@@ -115,6 +100,13 @@
     },
     {
       "id": 4,
+      "code": 128,
+      "libelle": "Table",
+      "prixunitaire": 200,
+      "tauxTva": 30
+    },
+    {
+      "id": 5,
       "code": 127,
       "libelle": "PC",
       "prixunitaire": 2000,

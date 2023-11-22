@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {User} from "../../Models/user";
-import {Router} from "@angular/router";
-import {UserService} from "../../Core/Services/user.service";
+import { User } from '../../Models/user';
+import { Route, Router } from '@angular/router';
+import { UserService } from 'src/app/Core/Services/user.service';
 
 @Component({
   selector: 'app-list-user',
@@ -9,7 +9,6 @@ import {UserService} from "../../Core/Services/user.service";
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent {
-
   constructor(private Router:Router,private userservice:UserService) {
   }
   list:User[]=[];
@@ -18,15 +17,10 @@ export class ListUserComponent {
 
   protected readonly User = User;
 
-  /*delete(i :number){
-    this.list.splice(i, 1);
-
-  }*/
-
   delete(i :number){
     this.userservice.deleteUser(i).subscribe(()=>{
       alert("user deleted");
-      this.Router.navigate(["users"]);
+      this.Router.navigate(["/users"]);
     });
 
   }
@@ -40,4 +34,3 @@ export class ListUserComponent {
     this.Router.navigate(["users/adduser"]);
   }
 }
-
